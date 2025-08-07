@@ -1,32 +1,40 @@
 # clean_pdf - PDF 清洗工具相依套件
 # 安裝指令: pip install -r requirements.txt
 
-# PDF 處理核心函式庫
-PyPDF2>=3.0.0
-PyMuPDF>=1.23.0
+# === PDF 處理核心函式庫 ===
+PyPDF2>=3.0.0          # PDF 讀取和基本操作
+PyMuPDF>=1.23.0        # PDF 渲染、圖像提取、高品質轉換
 
-# PDF 生成函式庫
-reportlab>=4.0.0
+# === PDF 生成函式庫 ===
+reportlab>=4.0.0       # PDF 生成和繪圖
 
-# 圖像處理
-Pillow>=10.0.0
+# === 圖像處理 ===
+Pillow>=10.0.0         # 圖像格式轉換、安全處理、RGB轉換
 
-# 命令列介面 (Python 3.7+ 內建，但列出以確保相容性)
-argparse
+# === 檔案類型檢測 ===
+python-magic>=0.4.27   # 檔案類型驗證和MIME類型檢測
+# Windows 使用者可能需要安裝: python-magic-bin>=0.4.14
 
-# 日期時間處理 (內建)
-datetime
+# === 命令列介面 (Python 3.7+ 內建) ===
+# argparse            # 命令列參數解析
 
-# JSON 處理 (內建)
-json
+# === 系統函式庫 (Python 內建) ===
+# 以下為內建模組，無需安裝但列出供參考：
+# os                  # 檔案系統操作
+# sys                 # 系統相關功能  
+# logging             # 日誌記錄
+# pathlib             # 路徑處理
+# tempfile            # 臨時檔案管理
+# shutil              # 檔案操作工具
+# hashlib             # 雜湊值計算
+# io                  # 輸入輸出流處理
+# typing              # 型別提示 (Python 3.5+)
 
-# 檔案系統操作 (內建)
-pathlib
-tempfile
-shutil
-os
-sys
-logging
+# === 可選依賴 ===
+# 如果需要更好的檔案類型檢測，在 Windows 上可能需要：
+# python-magic-bin>=0.4.14
 
-# 型別提示 (Python 3.5+ 內建)
-typing
+# === 開發依賴 (可選) ===
+# pytest>=7.0.0       # 單元測試
+# black>=22.0.0       # 程式碼格式化
+# flake8>=5.0.0       # 程式碼檢查
