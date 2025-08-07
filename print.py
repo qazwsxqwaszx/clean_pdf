@@ -79,6 +79,7 @@ class PDFPrintCleaner:
                 )
 
                 pix = None  # 釋放記憶體
+                page = None  # 釋放頁面資源
 
             doc.close()
             self.logger.info(f"成功渲染 {len(rendered_pages)} 頁")
@@ -124,6 +125,11 @@ class PDFPrintCleaner:
                     page_height,
                     preserveAspectRatio=True,
                 )
+
+                # 釋放圖像相關資源
+                img.close()
+                img_buffer.close()
+                page_data["image"] = None
 
                 c.showPage()
 
