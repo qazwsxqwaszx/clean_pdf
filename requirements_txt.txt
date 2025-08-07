@@ -1,0 +1,32 @@
+# clean_pdf - PDF 清洗工具相依套件
+# 安裝指令: pip install -r requirements.txt
+
+# PDF 處理核心函式庫
+PyPDF2>=3.0.0
+PyMuPDF>=1.23.0
+
+# PDF 生成函式庫
+reportlab>=4.0.0
+
+# 圖像處理
+Pillow>=10.0.0
+
+# 命令列介面 (Python 3.7+ 內建，但列出以確保相容性)
+argparse
+
+# 日期時間處理 (內建)
+datetime
+
+# JSON 處理 (內建)
+json
+
+# 檔案系統操作 (內建)
+pathlib
+tempfile
+shutil
+os
+sys
+logging
+
+# 型別提示 (Python 3.5+ 內建)
+typing
